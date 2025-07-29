@@ -15,11 +15,15 @@ int main()
     notaFinal = (nota1*0.35 + nota2*0.35 + notaTrabalho*0.3);
     if(notaFinal >= 7 && presenca >= 75)
     {
-        printf("Voce foi aprovado! Media final=%f\n", notaFinal);
+        printf("Voce foi aprovado! Media final=%.2f\n", notaFinal);
     }
-    else if(notaFinal < 7 || presenca < 75)
-    {
-        printf("Voce foi reprovado! Media final=%f\n", notaFinal);
+    else{
+        if(notaFinal >= 5 && presenca >= 75){
+            printf("Você não atingiu a média, mas poderá fazer o exame!  Media final=%.2f\n", notaFinal);
+        }
+        else{
+            printf("Você foi reprovado, sem direito a exame!  Media Final=%.2f\n", notaFinal);
+        }
     }
     return 0;
 }
