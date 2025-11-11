@@ -21,7 +21,6 @@ float escolhaCliente(){
         switch (codigo)
         {
         case 0:
-            resposta == 'N';
             break;
         case 121:
           precoProd = 5.5;
